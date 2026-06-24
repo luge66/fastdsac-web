@@ -53,13 +53,8 @@
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion">
-  <meta name="citation_author" content="Lu, Guanchen">
-  <meta name="citation_author" content="Dun, Yajuan">
-  <meta name="citation_author" content="Zhou, Yi">
-  <meta name="citation_author" content="Tao, Letian">
-  <meta name="citation_author" content="Duan, Jingliang">
-  <meta name="citation_author" content="Li, Jie">
-  <meta name="citation_author" content="Li, Guofa">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)">
   <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
@@ -104,7 +99,7 @@
   </noscript>
   
   <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -184,42 +179,47 @@
   </script>
 
   <style>
+    .more-works-container {
+      display: none !important;
+    }
+
     .fastdsac-hero {
       background: #ffffff;
     }
 
     .fastdsac-hero .hero-body {
-      padding: 2.4rem 1.5rem 2rem;
+      padding: 2.2rem 1.5rem 1.8rem;
     }
 
     .fastdsac-hero .container.is-max-desktop {
       width: 100%;
-      max-width: 1480px !important;
+      max-width: 1500px !important;
     }
 
     .fastdsac-hero .publication-title {
-      margin: 0 auto 1.7rem;
       max-width: 1450px;
+      margin: 0 auto 1.4rem;
       font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: clamp(2.35rem, 4.35vw, 4.8rem);
-      font-weight: 600;
-      line-height: 1.08;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.25rem, 4vw, 3.9rem);
+      font-weight: 500;
+      line-height: 1.13;
+      letter-spacing: -0.035em;
       color: #333333;
     }
 
     .fastdsac-hero .paper-accent {
-      color: #0878a8;
+      color: #2196f3;
+      font-weight: 600;
     }
 
     .fastdsac-hero .conference-logo {
-      margin: 1.1rem 0 2.15rem;
+      margin: 1.15rem 0 1.8rem;
     }
 
     .fastdsac-hero .conference-logo img {
       display: block;
-      width: 220px;
-      max-width: 44vw;
+      width: 205px;
+      max-width: 42vw;
       height: auto;
       margin: 0 auto;
     }
@@ -232,87 +232,90 @@
     }
 
     .fastdsac-hero .publication-authors {
-      max-width: 1160px;
+      max-width: 1180px;
       margin: 0 auto;
-      font-size: clamp(1.02rem, 1.45vw, 1.42rem) !important;
+      font-size: clamp(1.02rem, 1.35vw, 1.32rem) !important;
       font-weight: 400;
       line-height: 1.9;
     }
 
     .fastdsac-hero .author-block {
       display: inline-block;
-      color: #2196f3;
-      margin: 0 0.38rem 0.12rem;
+      margin: 0 0.28rem 0.12rem;
+      color: #333333;
       white-space: nowrap;
     }
 
+    .fastdsac-hero .author-block,
     .fastdsac-hero .author-block a {
-      color: #2196f3;
-    }
-
-    .fastdsac-hero .author-block a:hover {
-      color: #0878a8;
+      color: #333333 !important;
+      text-decoration: none !important;
     }
 
     .fastdsac-hero sup {
       position: relative;
-      top: -0.22em;
-      margin-left: 0.08em;
+      top: -0.25em;
+      margin-left: 0.05em;
       font-size: 0.68em;
     }
 
     .fastdsac-hero .corresponding-note {
-      margin: 0.15rem 0 0.35rem;
-      font-size: 0.96rem;
+      margin: 0.12rem 0 0.35rem;
+      font-size: 0.94rem;
     }
 
     .fastdsac-hero .publication-affiliations {
       max-width: 1250px;
       margin: 0 auto;
-      font-size: clamp(0.94rem, 1.18vw, 1.2rem) !important;
-      line-height: 1.75;
+      font-size: clamp(0.92rem, 1.08vw, 1.12rem) !important;
+      line-height: 1.72;
     }
 
     .fastdsac-hero .affiliation-block {
       display: inline-block;
-      margin: 0 0.65rem 0.1rem;
+      margin: 0 0.55rem 0.1rem;
     }
 
     .fastdsac-hero .publication-links {
-      margin-top: 1.55rem;
+      margin-top: 1.35rem;
     }
 
     .fastdsac-hero .publication-links .button {
-      min-width: 148px;
-      height: 3.65rem;
-      padding: 0 1.55rem;
+      min-width: 138px;
+      height: 3.35rem;
+      padding: 0 1.4rem;
       border: none;
       border-radius: 999px;
       background: #353535;
       font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: 1.08rem;
+      font-size: 1.02rem;
       font-weight: 500;
       color: #ffffff;
       box-shadow: none;
     }
 
     .fastdsac-hero .publication-links .button:hover {
-      background: #0878a8;
+      background: #2196f3;
       color: #ffffff;
     }
 
     @media screen and (max-width: 768px) {
       .fastdsac-hero .hero-body {
-        padding: 1.7rem 1rem 1.5rem;
+        padding: 1.55rem 1rem 1.3rem;
       }
 
       .fastdsac-hero .publication-title {
-        font-size: clamp(2rem, 9vw, 3rem);
-        letter-spacing: -0.035em;
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+      }
+
+      .desktop-break {
+        display: none;
       }
 
       .fastdsac-hero .conference-logo img {
-        width: 175px;
+        width: 165px;
       }
 
       .fastdsac-hero .publication-authors {
@@ -321,7 +324,7 @@
 
       .fastdsac-hero .affiliation-block {
         display: block;
-        margin: 0.15rem auto;
+        margin: 0.12rem auto;
       }
     }
   </style>
@@ -334,56 +337,7 @@
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
+<main id="main-content">
 
   <section class="hero fastdsac-hero">
     <div class="hero-body">
@@ -393,8 +347,11 @@
 
             <h1 class="title publication-title">
               <span class="paper-accent">FastDSAC</span>:
-              Enhancing Policy Plasticity via Constrained Exploration
-              for Scalable Humanoid Locomotion
+              Enhancing Policy Plasticity via
+              <br class="desktop-break">
+              Constrained Exploration for Scalable Humanoid
+              <br class="desktop-break">
+              Locomotion
             </h1>
 
             <div class="conference-logo">
@@ -424,26 +381,24 @@
               <span class="affiliation-block"><sup>4</sup>University of Science and Technology Beijing</span>
             </div>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="static/pdfs/FastDSAC.pdf"
-                     target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
-                  </a>
-                </span>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="static/pdfs/FastDSAC.pdf"
+                   target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
 
-                <span class="link-block">
-                  <a href="https://github.com/luge66/FastDSAC"
-                     target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Code</span>
-                  </a>
-                </span>
-              </div>
+              <span class="link-block">
+                <a href="https://github.com/luge66/FastDSAC"
+                   target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
             </div>
 
           </div>
