@@ -197,19 +197,20 @@
     }
 
     .fastdsac-hero .publication-title {
-      max-width: 1450px;
-      margin: 0 auto 1.4rem;
+      max-width: 1260px;
+      margin: 0 auto 1.55rem;
       font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: clamp(2.25rem, 4vw, 3.9rem);
-      font-weight: 400;
-      line-height: 1.13;
-      letter-spacing: -0.035em;
+      font-size: clamp(2.15rem, 3.35vw, 3.35rem);
+      font-weight: 400 !important;
+      font-synthesis: none;
+      line-height: 1.15;
+      letter-spacing: -0.028em;
       color: #333333;
     }
 
     .fastdsac-hero .paper-accent {
       color: #2196f3;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     .fastdsac-hero .conference-logo {
@@ -232,16 +233,28 @@
     }
 
     .fastdsac-hero .publication-authors {
-      max-width: 1180px;
+      max-width: 1160px;
       margin: 0 auto;
-      font-size: clamp(1.12rem, 1.55vw, 1.48rem) !important;
+      font-size: clamp(1.16rem, 1.48vw, 1.42rem) !important;
       font-weight: 400;
-      line-height: 1.9;
+      line-height: 1.65;
+    }
+
+    .fastdsac-hero .author-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.15rem 0.72rem;
+    }
+
+    .fastdsac-hero .author-row + .author-row {
+      margin-top: 0.12rem;
     }
 
     .fastdsac-hero .author-block {
       display: inline-block;
-      margin: 0 0.28rem 0.12rem;
+      margin: 0;
       color: #333333;
       white-space: nowrap;
     }
@@ -265,15 +278,28 @@
     }
 
     .fastdsac-hero .publication-affiliations {
-      max-width: 1250px;
+      max-width: 1260px;
       margin: 0 auto;
-      font-size: clamp(1.02rem, 1.28vw, 1.26rem) !important;
-      line-height: 1.72;
+      font-size: clamp(1.05rem, 1.24vw, 1.24rem) !important;
+      line-height: 1.65;
+    }
+
+    .fastdsac-hero .affiliation-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.12rem 1.5rem;
+    }
+
+    .fastdsac-hero .affiliation-row + .affiliation-row {
+      margin-top: 0.12rem;
     }
 
     .fastdsac-hero .affiliation-block {
       display: inline-block;
-      margin: 0 0.55rem 0.1rem;
+      margin: 0;
+      white-space: nowrap;
     }
 
     .fastdsac-hero .publication-links {
@@ -319,12 +345,16 @@
       }
 
       .fastdsac-hero .publication-authors {
-        line-height: 1.75;
+        line-height: 1.72;
+      }
+
+      .fastdsac-hero .author-row,
+      .fastdsac-hero .affiliation-row {
+        gap: 0.08rem 0.55rem;
       }
 
       .fastdsac-hero .affiliation-block {
-        display: block;
-        margin: 0.12rem auto;
+        white-space: normal;
       }
     }
   </style>
@@ -361,13 +391,17 @@
             </div>
 
             <div class="publication-authors">
-              <span class="author-block">Guanchen Lu<sup>1</sup>,</span>
-              <span class="author-block">Yajuan Dun<sup>2</sup>,</span>
-              <span class="author-block">Yi Zhou<sup>1</sup>,</span>
-              <span class="author-block">Letian Tao<sup>3</sup>,</span>
-              <span class="author-block">Jingliang Duan<sup>4</sup>,</span>
-              <span class="author-block">Jie Li<sup>1,*</sup>,</span>
-              <span class="author-block">Guofa Li<sup>1</sup></span>
+              <div class="author-row">
+                <span class="author-block">Guanchen Lu<sup>1</sup></span>
+                <span class="author-block">Yajuan Dun<sup>2</sup></span>
+                <span class="author-block">Yi Zhou<sup>1</sup></span>
+                <span class="author-block">Letian Tao<sup>3</sup></span>
+                <span class="author-block">Jingliang Duan<sup>4</sup></span>
+              </div>
+              <div class="author-row">
+                <span class="author-block">Jie Li<sup>1,*</sup></span>
+                <span class="author-block">Guofa Li<sup>1</sup></span>
+              </div>
             </div>
 
             <div class="corresponding-note">
@@ -375,10 +409,14 @@
             </div>
 
             <div class="publication-affiliations">
-              <span class="affiliation-block"><sup>1</sup>Chongqing University</span>
-              <span class="affiliation-block"><sup>2</sup>Ministry of Industry and Information Technology</span>
-              <span class="affiliation-block"><sup>3</sup>Tsinghua University</span>
-              <span class="affiliation-block"><sup>4</sup>University of Science and Technology Beijing</span>
+              <div class="affiliation-row">
+                <span class="affiliation-block"><sup>1</sup>Chongqing University</span>
+                <span class="affiliation-block"><sup>2</sup>Ministry of Industry and Information Technology</span>
+              </div>
+              <div class="affiliation-row">
+                <span class="affiliation-block"><sup>3</sup>Tsinghua University</span>
+                <span class="affiliation-block"><sup>4</sup>University of Science and Technology Beijing</span>
+              </div>
             </div>
 
             <div class="publication-links">
