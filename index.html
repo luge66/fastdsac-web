@@ -197,15 +197,20 @@
     }
 
     .fastdsac-hero .publication-title {
-      max-width: 1260px;
+      max-width: 1600px;
       margin: 0 auto 1.55rem;
       font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: clamp(2.15rem, 3.35vw, 3.35rem);
+      font-size: clamp(1.95rem, 2.65vw, 2.85rem);
       font-weight: 400 !important;
       font-synthesis: none;
-      line-height: 1.15;
-      letter-spacing: -0.028em;
+      line-height: 1.17;
+      letter-spacing: -0.025em;
       color: #333333;
+    }
+
+    .fastdsac-hero .title-line {
+      display: block;
+      white-space: nowrap;
     }
 
     .fastdsac-hero .paper-accent {
@@ -336,8 +341,8 @@
         letter-spacing: -0.025em;
       }
 
-      .desktop-break {
-        display: none;
+      .fastdsac-hero .title-line {
+        white-space: normal;
       }
 
       .fastdsac-hero .conference-logo img {
@@ -376,12 +381,13 @@
           <div class="column has-text-centered">
 
             <h1 class="title publication-title">
-              <span class="paper-accent">FastDSAC</span>:
-              Enhancing Policy Plasticity via
-              <br class="desktop-break">
-              Constrained Exploration for Scalable Humanoid
-              <br class="desktop-break">
-              Locomotion
+              <span class="title-line">
+                <span class="paper-accent">FastDSAC</span>:
+                Enhancing Policy Plasticity via
+              </span>
+              <span class="title-line">
+                Constrained Exploration for Scalable Humanoid Locomotion
+              </span>
             </h1>
 
             <div class="conference-logo">
