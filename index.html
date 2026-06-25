@@ -3,656 +3,1050 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion - Guanchen Lu et al.">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="Guanchen Lu, Yajuan Dun, Yi Zhou, Letian Tao, Jingliang Duan, Jie Li, Guofa Li">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+  <meta name="theme-color" content="#ffffff">
+
+  <title>FastDSAC | IROS 2026</title>
+  <meta
+    name="description"
+    content="FastDSAC improves the stability and plasticity of massively parallel off-policy reinforcement learning for scalable humanoid locomotion.">
+  <meta
+    name="keywords"
+    content="FastDSAC, humanoid locomotion, reinforcement learning, distributional actor-critic, policy plasticity, MuJoCo Playground, HumanoidBench, IROS 2026">
+  <meta
+    name="author"
+    content="Guanchen Lu, Yajuan Dun, Yi Zhou, Letian Tao, Jingliang Duan, Jie Li, Guofa Li">
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta
+    property="og:title"
+    content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion">
+  <meta
+    property="og:description"
+    content="FastDSAC stabilizes massively parallel off-policy reinforcement learning for scalable humanoid locomotion.">
+  <meta property="og:image" content="static/images/iros2026.png">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
   <meta name="citation_title" content="FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_author" content="Lu, Guanchen">
+  <meta name="citation_author" content="Dun, Yajuan">
+  <meta name="citation_author" content="Zhou, Yi">
+  <meta name="citation_author" content="Tao, Letian">
+  <meta name="citation_author" content="Duan, Jingliang">
+  <meta name="citation_author" content="Li, Jie">
+  <meta name="citation_author" content="Li, Guofa">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <meta name="citation_pdf_url" content="static/pdfs/FastDSAC.pdf">
+
+  <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>FastDSAC | IROS 2026</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans:400,500,600,700|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
 
   <style>
-    .more-works-container {
-      display: none !important;
+    :root {
+      --accent: #2196f3;
+      --brand-yellow: #fec526;
+      --text: #303030;
+      --muted: #5e5e5e;
+      --line: #e7e7e7;
+      --soft: #f3f3f3;
+      --page-width: 1180px;
+      --carousel-gap: 1.4rem;
     }
 
-    .fastdsac-hero {
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
       background: #ffffff;
-    }
-
-    .fastdsac-hero .hero-body {
-      padding: 2.2rem 1.5rem 1.8rem;
-    }
-
-    .fastdsac-hero .container.is-max-desktop {
-      width: 100%;
-      max-width: 1500px !important;
-    }
-
-    .fastdsac-hero .publication-title {
-      max-width: 1480px;
-      margin: 0 auto 1.55rem;
-      font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: clamp(2.15rem, 3.05vw, 3.30rem);
-      font-weight: 400 !important;
-      font-synthesis: none;
-      line-height: 1.14;
-      letter-spacing: -0.025em;
-      color: #333333;
-    }
-
-    .fastdsac-hero .title-line {
-      display: block;
-      white-space: nowrap;
-    }
-
-    .fastdsac-hero .paper-accent {
-      color: #2196f3;
-      font-weight: 400;
-    }
-
-    .fastdsac-hero .conference-logo {
-      margin: 1.15rem 0 1.8rem;
-    }
-
-    .fastdsac-hero .conference-logo img {
-      display: block;
-      width: 205px;
-      max-width: 42vw;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    .fastdsac-hero .publication-authors,
-    .fastdsac-hero .publication-affiliations,
-    .fastdsac-hero .corresponding-note {
-      font-family: "Poppins", "Inter", Arial, sans-serif;
-      color: #333333;
-    }
-
-    .fastdsac-hero .publication-authors {
-      max-width: 1160px;
-      margin: 0 auto;
-      font-size: clamp(1.16rem, 1.48vw, 1.42rem) !important;
-      font-weight: 400;
+      color: var(--text);
+      font-family: "Noto Sans", Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.65;
     }
 
-    .fastdsac-hero .author-row {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.15rem 0.72rem;
+    h1,
+    h2,
+    h3,
+    .paper-title,
+    .results-title,
+    .abstract-title,
+    .citation-title,
+    .video-card figcaption {
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
     }
 
-    .fastdsac-hero .author-row + .author-row {
-      margin-top: 0.12rem;
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    .fastdsac-hero .author-block {
-      display: inline-block;
-      margin: 0;
-      color: #333333;
-      white-space: nowrap;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .fastdsac-hero .author-block,
-    .fastdsac-hero .author-block a {
-      color: #333333 !important;
-      text-decoration: none !important;
+    img,
+    video {
+      display: block;
+      max-width: 100%;
     }
 
-    .fastdsac-hero sup {
-      position: relative;
-      top: -0.25em;
-      margin-left: 0.05em;
-      font-size: 0.68em;
+    .page-container {
+      width: min(var(--page-width), calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .fastdsac-hero .corresponding-note {
-      margin: 0.12rem 0 0.35rem;
-      font-size: 1.05rem;
+    .accent-text {
+      color: var(--brand-yellow);
+      font-weight: 700;
     }
 
-    .fastdsac-hero .publication-affiliations {
+    /* Header */
+    .hero {
+      padding: 3.15rem 0 2.45rem;
+      text-align: center;
+    }
+
+    .paper-title {
       max-width: 1260px;
+      margin: 0 auto 1.2rem;
+      color: #252525;
+      font-size: clamp(2.05rem, 4.1vw, 3.45rem);
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+    }
+
+    .paper-title .accent-text {
+      font-weight: 600;
+    }
+
+    .conference-logo {
+      width: 188px;
+      height: auto;
+      margin: 1rem auto 1.35rem;
+    }
+
+    .authors {
+      max-width: 980px;
       margin: 0 auto;
-      font-size: clamp(1.05rem, 1.24vw, 1.24rem) !important;
-      line-height: 1.65;
+      font-size: clamp(1.02rem, 1.8vw, 1.25rem);
+      line-height: 1.8;
     }
 
-    .fastdsac-hero .affiliation-row {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.12rem 1.5rem;
-    }
-
-    .fastdsac-hero .affiliation-row + .affiliation-row {
-      margin-top: 0.12rem;
-    }
-
-    .fastdsac-hero .affiliation-block {
+    .author {
       display: inline-block;
-      margin: 0;
+      margin: 0 0.3rem;
       white-space: nowrap;
     }
 
-    .fastdsac-hero .publication-links {
+    .authors sup,
+    .affiliations sup,
+    .corresponding sup {
+      position: relative;
+      top: -0.35em;
+      font-size: 0.65em;
+    }
+
+    .corresponding {
+      margin: 0.16rem 0 0.28rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .affiliations {
+      max-width: 1040px;
+      margin: 0 auto;
+      color: #3c3c3c;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .affiliation {
+      display: inline-block;
+      margin: 0 0.48rem;
+      white-space: nowrap;
+    }
+
+    .publication-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.72rem;
       margin-top: 1.35rem;
     }
 
-    .fastdsac-hero .publication-links .button {
-      min-width: 138px;
-      height: 3.35rem;
-      padding: 0 1.4rem;
-      border: none;
+    .publication-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-width: 118px;
+      height: 43px;
+      padding: 0 1.05rem;
       border-radius: 999px;
-      background: #353535;
-      font-family: "Poppins", "Inter", Arial, sans-serif;
-      font-size: 1.02rem;
+      background: #363636;
+      color: #ffffff;
+      font-size: 0.95rem;
       font-weight: 500;
-      color: #ffffff;
-      box-shadow: none;
+      transition: background 0.18s ease, transform 0.18s ease;
     }
 
-    .fastdsac-hero .publication-links .button:hover {
-      background: #2196f3;
+    .publication-button:hover {
+      background: var(--accent);
       color: #ffffff;
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
-    @media screen and (max-width: 768px) {
-      .fastdsac-hero .hero-body {
-        padding: 1.55rem 1rem 1.3rem;
+    .publication-button .button-icon {
+      width: 1.15rem;
+      height: 1.15rem;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .publication-button .github-icon {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    /* Abstract */
+    .abstract-section {
+      width: 100%;
+      padding: 2.45rem 0 2.65rem;
+      background: var(--soft);
+    }
+
+    .abstract-panel {
+      padding: 0;
+      background: transparent;
+    }
+
+    .abstract-title {
+      margin: 0 0 1.25rem;
+      color: #333333;
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+      font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .abstract-text {
+      max-width: 1180px;
+      margin: 0 auto;
+      color: #3f3f3f;
+      font-family: "Noto Sans", Arial, sans-serif;
+      font-size: clamp(1rem, 1.08vw, 1.1rem);
+      font-weight: 400;
+      line-height: 1.72;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-word;
+      hyphens: none;
+      word-spacing: normal;
+      letter-spacing: normal;
+    }
+
+    /* Results sections */
+    .results-section {
+      padding: 0.7rem 0 3.1rem;
+    }
+
+    /* Add extra space only between the Abstract band and the first Results section. */
+    #abstract + .results-section {
+      padding-top: 3.6rem;
+    }
+
+    .results-section + .results-section {
+      padding-top: 2.55rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .results-title {
+      margin: 0 0 0.75rem;
+      color: #323232;
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+      font-size: clamp(1.55rem, 2.15vw, 1.95rem);
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .results-description {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto 2rem;
+      color: #4d4d4d;
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.65;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-word;
+      hyphens: none;
+      word-spacing: normal;
+      letter-spacing: normal;
+    }
+
+    .no-wrap {
+      white-space: nowrap;
+    }
+
+    /* Carousel */
+    .video-carousel {
+      position: relative;
+    }
+
+    .carousel-viewport {
+      overflow: hidden;
+      /* Reserve enough space above the cards so the hover lift is not clipped. */
+      padding: 0.7rem 0.15rem 0.9rem;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: var(--carousel-gap);
+      transform: translate3d(0, 0, 0);
+      transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+
+    .video-card {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 calc((100% - (2 * var(--carousel-gap))) / 3);
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.08);
+      transform: translateY(0);
+      transition:
+        transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 260ms ease,
+        border-color 260ms ease;
+      will-change: transform;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .video-card:hover {
+        z-index: 2;
+        transform: translateY(-6px);
+        border-color: #d7d7d7;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .video-media {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #ededed;
+    }
+
+    .video-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #ededed;
+    }
+
+    .video-card figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 0.75rem 0.8rem;
+      color: #2d2d2d;
+      background: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .video-status {
+      position: absolute;
+      inset: auto 0.65rem 0.65rem auto;
+      display: none;
+      padding: 0.25rem 0.45rem;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.68);
+      color: #ffffff;
+      font-size: 0.72rem;
+    }
+
+    .video-media.has-error .video-status {
+      display: block;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: calc(50% - 28px);
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.96);
+      color: #555555;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13);
+      cursor: pointer;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .carousel-button svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .carousel-button:hover:not(:disabled) {
+      transform: scale(1.04);
+    }
+
+    .carousel-button:disabled {
+      opacity: 0.32;
+      cursor: default;
+    }
+
+    .carousel-button.prev {
+      left: -27px;
+    }
+
+    .carousel-button.next {
+      right: -27px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.42rem;
+      min-height: 16px;
+      margin-top: 0.2rem;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #d8d8d8;
+      cursor: pointer;
+    }
+
+    .carousel-dot.is-active {
+      background: #8f8f8f;
+    }
+
+    /* Citation */
+    .citation-section {
+      padding: 2.6rem 0 3.2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .citation-title {
+      margin: 0 0 1rem;
+      color: #323232;
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+      font-size: clamp(1.55rem, 2.15vw, 1.95rem);
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .citation-wrap {
+      width: 100%;
+      margin: 0;
+    }
+
+    .citation-wrap pre {
+      margin: 0;
+      padding: 1.35rem 1.45rem;
+      overflow-x: auto;
+      border-radius: 0;
+      background: #f5f5f5;
+      color: #333333;
+      font-family: Consolas, "Liberation Mono", monospace;
+      font-size: 0.92rem;
+      font-weight: 400;
+      line-height: 1.55;
+      white-space: pre;
+    }
+
+    .site-footer {
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--line);
+      color: #777777;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 0.18rem 0;
+    }
+
+    @media (max-width: 960px) {
+      .video-card {
+        flex-basis: calc((100% - var(--carousel-gap)) / 2);
       }
 
-      .fastdsac-hero .publication-title {
-        font-size: clamp(1.9rem, 8vw, 2.8rem);
-        line-height: 1.12;
-        letter-spacing: -0.025em;
+      .carousel-button.prev {
+        left: -18px;
       }
 
-      .fastdsac-hero .title-line {
+      .carousel-button.next {
+        right: -18px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page-container {
+        width: min(var(--page-width), calc(100% - 24px));
+      }
+
+      .hero {
+        padding: 2.2rem 0 2rem;
+      }
+
+      .paper-title {
+        font-size: clamp(1.82rem, 8.6vw, 2.55rem);
+      }
+
+      .paper-title br {
+        display: none;
+      }
+
+      .conference-logo {
+        width: 158px;
+      }
+
+      .affiliation {
         white-space: normal;
       }
 
-      .fastdsac-hero .conference-logo img {
-        width: 165px;
+      .abstract-section {
+        padding: 1.8rem 0 2rem;
       }
 
-      .fastdsac-hero .publication-authors {
-        line-height: 1.72;
+      .abstract-panel {
+        padding: 0;
       }
 
-      .fastdsac-hero .author-row,
-      .fastdsac-hero .affiliation-row {
-        gap: 0.08rem 0.55rem;
+      .abstract-title {
+        font-size: 1.78rem;
       }
 
-      .fastdsac-hero .affiliation-block {
-        white-space: normal;
+      .abstract-text {
+        font-size: 0.98rem;
+        line-height: 1.68;
+        text-align-last: left;
+      }
+
+      .results-section {
+        padding-bottom: 2.5rem;
+      }
+
+      #abstract + .results-section {
+        padding-top: 2.6rem;
+      }
+
+      .video-card {
+        flex-basis: 100%;
+      }
+
+      .carousel-button {
+        width: 46px;
+        height: 46px;
+      }
+
+      .carousel-button.prev {
+        left: -7px;
+      }
+
+      .carousel-button.next {
+        right: -7px;
+      }
+
+      .citation-wrap pre {
+        padding: 1.15rem 1.1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .carousel-track,
+      .publication-button,
+      .carousel-button,
+      .video-card {
+        transition: none;
       }
     }
   </style>
-
 </head>
+
 <body>
+  <main>
+    <header class="hero">
+      <div class="page-container">
+        <h1 class="paper-title">
+          <span class="accent-text">FastDSAC</span>: Enhancing Policy Plasticity via<br>
+          Constrained Exploration for Scalable Humanoid Locomotion
+        </h1>
 
+        <img
+          class="conference-logo"
+          src="static/images/iros2026.png"
+          alt="IROS 2026"
+          loading="eager">
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-<main id="main-content">
+        <div class="authors" aria-label="Authors">
+          <span class="author">Guanchen Lu<sup>1</sup></span>
+          <span class="author">Yajuan Dun<sup>2</sup></span>
+          <span class="author">Yi Zhou<sup>1</sup></span>
+          <span class="author">Letian Tao<sup>3</sup></span>
+          <span class="author">Jingliang Duan<sup>4</sup></span>
+          <span class="author">Jie Li<sup>1,*</sup></span>
+          <span class="author">Guofa Li<sup>1</sup></span>
+        </div>
 
-  <section class="hero fastdsac-hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
+        <p class="corresponding"><sup>*</sup>Corresponding author</p>
 
-            <h1 class="title publication-title">
-              <span class="title-line">
-                <span class="paper-accent">FastDSAC</span>:
-                Enhancing Policy Plasticity via
-              </span>
-              <span class="title-line">
-                Constrained Exploration for Scalable Humanoid Locomotion
-              </span>
-            </h1>
+        <div class="affiliations" aria-label="Affiliations">
+          <span class="affiliation"><sup>1</sup>Chongqing University</span>
+          <span class="affiliation"><sup>2</sup>Ministry of Industry and Information Technology</span>
+          <span class="affiliation"><sup>3</sup>Tsinghua University</span>
+          <span class="affiliation"><sup>4</sup>University of Science and Technology Beijing</span>
+        </div>
 
-            <div class="conference-logo">
-              <img src="static/images/iros2026.png"
-                   alt="IROS 2026 Pittsburgh"
-                   loading="eager">
+        <div class="publication-links">
+          <a
+            class="publication-button"
+            href="static/pdfs/FastDSAC.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 2h8l4 4v16H6z"></path>
+              <path d="M14 2v5h5"></path>
+              <path d="M8.5 16.5c1.7-2.2 2.8-4.2 3.4-6.1"></path>
+              <path d="M10.2 14.4c1.8.8 3.5 1.2 5.2 1.2"></path>
+              <path d="M9.1 15.7c-.8.3-1.5.8-2.1 1.5"></path>
+            </svg>
+            <span>Paper</span>
+          </a>
+
+          <a
+            class="publication-button"
+            href="https://arxiv.org/abs/REPLACE_WITH_ARXIV_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the paper on arXiv">
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 2h8l4 4v16H6z"></path>
+              <path d="M14 2v5h5"></path>
+            </svg>
+            <span>ArXiv</span>
+          </a>
+
+          <a
+            class="publication-button"
+            href="https://github.com/luge66/FastDSAC"
+            target="_blank"
+            rel="noopener noreferrer">
+            <svg class="button-icon github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1.1 3 .8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.6 4.9.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5z"></path>
+            </svg>
+            <span>Code</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="abstract-section" id="abstract">
+      <div class="page-container abstract-panel">
+        <h2 class="abstract-title">Abstract</h2>
+        <p class="abstract-text">
+          Scalable reinforcement learning has popularized high-throughput sampling architectures,
+          which significantly compresses the training time for off-policy methods in robotic
+          locomotion. However, the rapid increase of data volume and update frequency undermines
+          the stability of value-based methods and diminishes the plasticity of policy networks.
+          To address these challenges, this work presents <span class="accent-text">FastDSAC</span>,
+          a fast and high-performance variant of the Distributional Actor-Critic algorithm designed
+          for parallel sampling scenarios. Specifically, we introduce a truncated Gaussian
+          distribution to approximate the learned policy, which effectively excludes
+          out-of-distribution actions that strain target value estimation while keeping necessary
+          stochasticity for exploration. The proposed action constraint functions as an implicit
+          regularization, which counteracts the plasticity loss typically caused by aggressive
+          gradient updates. This preservation of network adaptability enhances sample efficiency,
+          particularly in scenarios with a high update-to-data ratio, and accelerates the early
+          training process. In contrast to prior fast reinforcement learning approaches that rely
+          on discrete value distributions, our method utilizes a continuous Gaussian representation
+          equipped with adaptive variance regulation, which improves value estimation accuracy by
+          sampling confident and informative transitions. Extensive experiments on MuJoCo
+          Playground and HumanoidBench demonstrate that <span class="accent-text">FastDSAC</span>
+          not only stabilizes the overall training process but also achieves superior asymptotic
+          performance and faster convergence compared to state-of-the-art baselines.
+        </p>
+      </div>
+    </section>
+
+    <section class="results-section" id="mujoco-playground">
+      <div class="page-container">
+        <h2 class="results-title">MuJoCo Playground Evaluation</h2>
+        <p class="results-description">
+          <span class="accent-text">FastDSAC</span> learns high-performing joystick controllers
+          for Unitree G1 and Booster T1 on flat and rough terrain.
+        </p>
+
+        <div class="video-carousel" data-carousel>
+          <button class="carousel-button prev" type="button" aria-label="Previous MuJoCo video">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M15 5 8 12l7 7"></path>
+            </svg>
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/t1flat.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>T1JoystickFlatTerrain</figcaption>
+              </figure>
+
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/t1rough.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>T1JoystickRoughTerrain</figcaption>
+              </figure>
+
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/g1flat.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>G1JoystickFlatTerrain</figcaption>
+              </figure>
+
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/g1rough.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>G1JoystickRoughTerrain</figcaption>
+              </figure>
             </div>
-
-            <div class="publication-authors">
-              <div class="author-row">
-                <span class="author-block">Guanchen Lu<sup>1</sup></span>
-                <span class="author-block">Yajuan Dun<sup>2</sup></span>
-                <span class="author-block">Yi Zhou<sup>1</sup></span>
-                <span class="author-block">Letian Tao<sup>3</sup></span>
-                <span class="author-block">Jingliang Duan<sup>4</sup></span>
-              </div>
-              <div class="author-row">
-                <span class="author-block">Jie Li<sup>1,*</sup></span>
-                <span class="author-block">Guofa Li<sup>1</sup></span>
-              </div>
-            </div>
-
-            <div class="corresponding-note">
-              <sup>*</sup>Corresponding author
-            </div>
-
-            <div class="publication-affiliations">
-              <div class="affiliation-row">
-                <span class="affiliation-block"><sup>1</sup>Chongqing University</span>
-                <span class="affiliation-block"><sup>2</sup>Ministry of Industry and Information Technology</span>
-              </div>
-              <div class="affiliation-row">
-                <span class="affiliation-block"><sup>3</sup>Tsinghua University</span>
-                <span class="affiliation-block"><sup>4</sup>University of Science and Technology Beijing</span>
-              </div>
-            </div>
-
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="static/pdfs/FastDSAC.pdf"
-                   target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://github.com/luge66/FastDSAC"
-                   target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-            </div>
-
           </div>
+
+          <button class="carousel-button next" type="button" aria-label="Next MuJoCo video">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m9 5 7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <div class="carousel-dots" aria-label="MuJoCo carousel pages"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="results-section" id="humanoidbench">
+      <div class="page-container">
+        <h2 class="results-title">HumanoidBench Evaluation</h2>
+        <p class="results-description">
+          <span class="accent-text">FastDSAC</span> learns whole-body locomotion policies across
+          HumanoidBench tasks, including running, walking, standing, pole traversal, sliding, and
+          hurdle crossing, while maintaining coordinated motion and consistent performance across
+          locomotion behaviors.
+        </p>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+        <div class="video-carousel" data-carousel>
+          <button class="carousel-button prev" type="button" aria-label="Previous HumanoidBench video">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M15 5 8 12l7 7"></path>
+            </svg>
+          </button>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/run.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_run</figcaption>
+              </figure>
 
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/walk.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_walk</figcaption>
+              </figure>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/stand.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_stand</figcaption>
+              </figure>
 
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/pole.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_pole</figcaption>
+              </figure>
 
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/slide.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_slide</figcaption>
+              </figure>
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <figure class="video-card">
+                <div class="video-media">
+                  <video class="behavior-video" muted loop playsinline preload="metadata">
+                    <source src="static/videos/hurdle.mp4" type="video/mp4">
+                  </video>
+                  <span class="video-status">Video unavailable</span>
+                </div>
+                <figcaption>h1hand_hurdle</figcaption>
+              </figure>
+            </div>
           </div>
+
+          <button class="carousel-button next" type="button" aria-label="Next HumanoidBench video">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m9 5 7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <div class="carousel-dots" aria-label="HumanoidBench carousel pages"></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+    </section>
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+    <section class="citation-section" id="citation">
+      <div class="page-container">
+        <h2 class="citation-title">BibTeX</h2>
+        <div class="citation-wrap">
+          <pre><code>@inproceedings{lu2026fastdsac,
+  title     = {FastDSAC: Enhancing Policy Plasticity via Constrained Exploration for Scalable Humanoid Locomotion},
+  author    = {Guanchen Lu and Yajuan Dun and Yi Zhou and Letian Tao and Jingliang Duan and Jie Li and Guofa Li},
+  booktitle = {2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
+  </main>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <footer class="site-footer">
+    <p><span class="accent-text">FastDSAC</span> Project Page · IROS 2026</p>
+    <p>Website layout inspired by modern academic project pages.</p>
+  </footer>
 
-    <!-- End of Statcounter Code -->
+  <script>
+    (() => {
+      "use strict";
 
-  </body>
-  </html>
+      const getVisibleCount = () => {
+        if (window.matchMedia("(max-width: 680px)").matches) return 1;
+        if (window.matchMedia("(max-width: 960px)").matches) return 2;
+        return 3;
+      };
+
+      const safePlay = (video) => {
+        video.muted = true;
+        video.playsInline = true;
+
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            /* A rejected autoplay request should not break the page. */
+          });
+        }
+      };
+
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const viewport = carousel.querySelector(".carousel-viewport");
+        const track = carousel.querySelector(".carousel-track");
+        const cards = Array.from(carousel.querySelectorAll(".video-card"));
+        const prevButton = carousel.querySelector(".carousel-button.prev");
+        const nextButton = carousel.querySelector(".carousel-button.next");
+        const dotsContainer = carousel.querySelector(".carousel-dots");
+
+        let index = 0;
+        let isOnScreen = false;
+        let resizeTimer = null;
+
+        const pageCount = () => Math.max(1, cards.length - getVisibleCount() + 1);
+
+        const buildDots = () => {
+          dotsContainer.innerHTML = "";
+          for (let i = 0; i < pageCount(); i += 1) {
+            const dot = document.createElement("button");
+            dot.className = "carousel-dot";
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Show carousel page ${i + 1}`);
+            dot.addEventListener("click", () => {
+              index = i;
+              updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+          }
+        };
+
+        const updateVideoPlayback = () => {
+          const visibleCount = getVisibleCount();
+
+          cards.forEach((card, cardIndex) => {
+            const video = card.querySelector("video");
+            const shouldPlay =
+              isOnScreen &&
+              cardIndex >= index &&
+              cardIndex < index + visibleCount;
+
+            if (shouldPlay) {
+              if (video.readyState >= 2) {
+                safePlay(video);
+              } else {
+                video.addEventListener("canplay", () => safePlay(video), { once: true });
+                video.load();
+              }
+            } else {
+              video.pause();
+            }
+          });
+        };
+
+        const updateCarousel = () => {
+          const visibleCount = getVisibleCount();
+          const maxIndex = Math.max(0, cards.length - visibleCount);
+          index = Math.min(index, maxIndex);
+
+          const firstCard = cards[0];
+          const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+          const cardWidth = firstCard.getBoundingClientRect().width;
+          track.style.transform = `translate3d(${-index * (cardWidth + gap)}px, 0, 0)`;
+
+          prevButton.disabled = index === 0;
+          nextButton.disabled = index === maxIndex;
+
+          Array.from(dotsContainer.children).forEach((dot, dotIndex) => {
+            dot.classList.toggle("is-active", dotIndex === index);
+          });
+
+          updateVideoPlayback();
+        };
+
+        prevButton.addEventListener("click", () => {
+          index = Math.max(0, index - 1);
+          updateCarousel();
+        });
+
+        nextButton.addEventListener("click", () => {
+          index = Math.min(pageCount() - 1, index + 1);
+          updateCarousel();
+        });
+
+        cards.forEach((card) => {
+          const video = card.querySelector("video");
+          const media = card.querySelector(".video-media");
+
+          video.muted = true;
+          video.loop = true;
+          video.playsInline = true;
+
+          video.addEventListener("error", () => {
+            media.classList.add("has-error");
+          });
+
+          video.addEventListener("loadeddata", () => {
+            media.classList.remove("has-error");
+          });
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              isOnScreen = entry.isIntersecting;
+              updateVideoPlayback();
+            });
+          },
+          { rootMargin: "120px 0px", threshold: 0.08 }
+        );
+
+        observer.observe(viewport);
+
+        buildDots();
+        updateCarousel();
+
+        window.addEventListener("resize", () => {
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(() => {
+            buildDots();
+            updateCarousel();
+          }, 120);
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
